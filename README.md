@@ -7,7 +7,7 @@
 ## will fail 6 ctest cases out of 798
 
 # 3. ceres manly
-## normal install, need pass all ctest cases
+## normal install, without eigen, need pass all ctest cases
 ## typical Ceres test bench mark is 131s
 
 # 4. Download buildOpencvTX2, remove libeigen3-dev, install Opencv manuly
