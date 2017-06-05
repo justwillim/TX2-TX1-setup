@@ -5,10 +5,26 @@
 * for TX2 you may need to flash it tiwce, one just flash the OS, the other install cuda
 * if the tx1/tx2 cannot boot the GUI, but shut down after finish loading BIOS, try to change a more powerful power source
 
+## basic tools
+`sudo apt-get install terminator -y`
+
+`sudo apt-get install git`
+
+`sudo apt-get install cmake -y`
+
+`sudo apt-get install vim -y`
+
+`sudo apt-get install htop`
+
 # 2. Eigen manuly
 ## install Eigen stable release V3.3.3
 * http://eigen.tuxfamily.org/index.php?title=Main_Page
 * it will fail 6 ctest cases out of 798
+
+host:
+`scp ~/Downloads/eigen-eigen-67e894c6cd8f.tar.bz2 ubuntu@<YOUR_SSH PATH>:~/`
+
+`cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DEIGEN_TEST_CXX11=ON -DEIGEN_CUDA_COMPUTE_ARCH=53 -DEIGEN_BUILD_BTL=ON`
 
 # 3. ceres manly
 ## normal install, without eigen, need pass all ctest cases
