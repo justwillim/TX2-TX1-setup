@@ -1,6 +1,6 @@
 # 1. flash the TX2
 ## download jetpack L4T 3.0
-* do not run the script in sudo mode, although it will require root permition inside
+* do not run the script in sudo mode when installing host components
 * do not install OpenCV4Tegra V2.4 for TX2, we will use OpenCV3
 * for TX2 you may need to flash it tiwce, one just flash the OS, the other install cuda
 * if the tx1/tx2 cannot boot the GUI, but shut down after finish loading BIOS, try to change a more powerful power source
