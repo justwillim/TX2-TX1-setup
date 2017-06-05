@@ -26,6 +26,10 @@ host:
 
 `cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DEIGEN_TEST_CXX11=ON -DEIGEN_CUDA_COMPUTE_ARCH=53 -DEIGEN_BUILD_BTL=ON`
 
+`make check`
+
+this step will take really a long time
+
 # 3. ceres manly
 ## normal install, without eigen, need pass all ctest cases
 ## typical Ceres test bench mark is 131s
@@ -47,3 +51,15 @@ you could install ROS through apt, but it might conflict with OPENCV3-CUDA
 `~$ sudo nvpmodel -m 0`
 
 `~$ sudo ./jecson_clock.sh`
+
+# some useful scropts
+monitor the CPU temperture
+
+`watch -n 1 cat /sys/devices/virtual/thermal/thermal_zone1/temp`
+
+check CUDA version
+
+`nvcc -V`
+
+
+
