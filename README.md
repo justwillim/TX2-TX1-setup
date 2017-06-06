@@ -18,24 +18,82 @@
 
 # 2. Eigen manuly
 ## install Eigen stable release V3.3.3
+
 * http://eigen.tuxfamily.org/index.php?title=Main_Page
+
 * it will fail 6 ctest cases out of 798
+* or if you build BTL, fail  ctest cases out of 832
 
 host:
+
 `scp ~/Downloads/eigen-eigen-67e894c6cd8f.tar.bz2 ubuntu@<YOUR_SSH PATH>:~/`
 
-`cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DEIGEN_TEST_CXX11=ON -DEIGEN_CUDA_COMPUTE_ARCH=53 -DEIGEN_BUILD_BTL=ON`
+`cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_PREFIX=/usr/local -DEIGEN_TEST_CXX11=ON -DEIGEN_CUDA_COMPUTE_ARCH=53 -DEIGEN_BUILD_BTL=ON`
 
 `make check`
+
+TX1 result:
+
+Label Time Summary:
+Official       = 618.29 sec (660 tests)
+Unsupported    = 294.54 sec (164 tests)
+
+Total Test time (real) = 963.72 sec
+
+The following tests FAILED:
+	384 - qr_colpivoting_3 (OTHER_FAULT)
+	479 - bdcsvd_9 (OTHER_FAULT)
+	661 - failtests (Failed)
+	662 - NonLinearOptimization (OTHER_FAULT)
+	684 - matrix_function_1 (OTHER_FAULT)
+	714 - sparse_extra_3 (OTHER_FAULT)
+	826 - btl_eigen3_linear (Not Run)
+	827 - btl_eigen3_vecmat (Not Run)
+	828 - btl_eigen3_matmat (Not Run)
+	829 - btl_eigen3_adv (Not Run)
+	830 - btl_tensor_linear (Not Run)
+	831 - btl_tensor_vecmat (Not Run)
+	832 - btl_tensor_matmat (Not Run)
+
 
 this step will take really a long time
 
 # 3. ceres manly
 normal install, without eigen, need pass all ctest cases
 
-typical Ceres test bench mark is 131s
+typical Ceres test bench mark is 131s for TX2
+
+ceres-solver.org/ceres-solver-1.12.0.tar.gz
+
+`sudo apt-get install libgoogle-glog-dev`
+
+`sudo apt-get install libatlas-base-dev -y`
+
+`sudo apt-get install libsuitesparse-dev -y`
+
+`tar zxf ceres-solver-1.12.0.tar.gz`
+
+`mkdir ceres-bin`
+
+`cd ceres-bin`
+
+`cmake ../ceres-solver-1.12.0 -DCMAKE_INSTALL_PREFIX=/usr/local` 
+
+`make -j4`
+
+`make test`
+
+TX1 test result:L
+100% tests passed, 0 tests failed out of 68
+
+Total Test time (real) = 392.52 sec
+
+
+`make install`
 
 # 4. Download buildOpencvTX2, remove libeigen3-dev, install Opencv manuly
+
+https://github.com/jetsonhacks/buildOpenCVTX2/blob/master/buildOpenCV.sh
 
 # 5. ros-desktop source install, remove eigen & opencv3
 
