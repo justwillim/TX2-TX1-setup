@@ -37,28 +37,43 @@ TX2:
 `make check`
 
 TX1 result:
-`
-Label Time Summary:
-Official       = 618.29 sec (660 tests)
-Unsupported    = 294.54 sec (164 tests)
 
-Total Test time (real) = 963.72 sec
+`Label Time Summary:`
 
-The following tests FAILED:
-	384 - qr_colpivoting_3 (OTHER_FAULT)
-	479 - bdcsvd_9 (OTHER_FAULT)
-	661 - failtests (Failed)
-	662 - NonLinearOptimization (OTHER_FAULT)
-	684 - matrix_function_1 (OTHER_FAULT)
-	714 - sparse_extra_3 (OTHER_FAULT)
-	826 - btl_eigen3_linear (Not Run)
-	827 - btl_eigen3_vecmat (Not Run)
-	828 - btl_eigen3_matmat (Not Run)
-	829 - btl_eigen3_adv (Not Run)
-	830 - btl_tensor_linear (Not Run)
-	831 - btl_tensor_vecmat (Not Run)
-	832 - btl_tensor_matmat (Not Run)
-`
+`Official       = 618.29 sec (660 tests)`
+
+`Unsupported    = 294.54 sec (164 tests)`
+
+`Total Test time (real) = 963.72 sec`
+
+`The following tests FAILED:`
+
+`	384 - qr_colpivoting_3 (OTHER_FAULT)`
+
+`	479 - bdcsvd_9 (OTHER_FAULT)`
+
+`	661 - failtests (Failed)`
+
+`	662 - NonLinearOptimization (OTHER_FAULT)`
+
+`	684 - matrix_function_1 (OTHER_FAULT)`
+
+`	714 - sparse_extra_3 (OTHER_FAULT)`
+
+`	826 - btl_eigen3_linear (Not Run)`
+
+`	827 - btl_eigen3_vecmat (Not Run)`
+
+`	828 - btl_eigen3_matmat (Not Run)`
+
+`	829 - btl_eigen3_adv (Not Run)`
+
+`	830 - btl_tensor_linear (Not Run)`
+
+`	831 - btl_tensor_vecmat (Not Run)`
+
+`	832 - btl_tensor_matmat (Not Run)`
+
 
 this step will take really a long time
 
