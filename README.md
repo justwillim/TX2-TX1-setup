@@ -100,6 +100,58 @@ Total Test time (real) = 392.52 sec
 
 https://github.com/jetsonhacks/buildOpenCVTX2/blob/master/buildOpenCV.sh
 
+in opencv V3.2.0
+opencv_test_cudev will fail, but acturally, it success, ctest made a wrong test compare between 2.0 and 2.
+
+TX1 result:
+Label Time Summary:
+Accuracy                 = 2187.12 sec (27 tests)
+Main                     = 6063.93 sec (71 tests)
+Performance              = 3202.87 sec (22 tests)
+Sanity                   = 673.94 sec (22 tests)
+opencv_calib3d           = 303.71 sec (3 tests)
+opencv_core              = 1201.93 sec (3 tests)
+opencv_cudaarithm        = 203.99 sec (3 tests)
+opencv_cudabgsegm        =  10.81 sec (3 tests)
+opencv_cudacodec         =   0.45 sec (3 tests)
+opencv_cudafeatures2d    =  24.15 sec (3 tests)
+opencv_cudafilters       = 137.54 sec (3 tests)
+opencv_cudaimgproc       = 371.67 sec (3 tests)
+opencv_cudalegacy        = 137.41 sec (3 tests)
+opencv_cudaobjdetect     =  11.42 sec (3 tests)
+opencv_cudaoptflow       =  28.72 sec (3 tests)
+opencv_cudastereo        =  25.07 sec (3 tests)
+opencv_cudawarping       = 605.62 sec (3 tests)
+opencv_cudev             =   1.99 sec (1 test)
+opencv_features2d        = 125.05 sec (3 tests)
+opencv_flann             =   0.02 sec (1 test)
+opencv_highgui           =   0.05 sec (1 test)
+opencv_imgcodecs         =  75.52 sec (3 tests)
+opencv_imgproc           = 761.49 sec (3 tests)
+opencv_ml                =  84.47 sec (1 test)
+opencv_objdetect         =  22.82 sec (3 tests)
+opencv_photo             = 236.25 sec (3 tests)
+opencv_shape             = 1089.02 sec (1 test)
+opencv_stitching         = 328.15 sec (3 tests)
+opencv_superres          =  30.62 sec (3 tests)
+opencv_video             = 124.65 sec (3 tests)
+opencv_videoio           = 121.32 sec (3 tests)
+
+Total Test time (real) = 6064.09 sec
+
+The following tests FAILED:
+	  1 - opencv_test_cudev (Failed)
+	 17 - opencv_perf_cudabgsegm (Failed)
+	 23 - opencv_perf_cudaimgproc (Failed)
+	 26 - opencv_perf_cudawarping (Failed)
+	 27 - opencv_sanity_cudawarping (Failed)
+	 35 - opencv_test_videoio (Failed)
+	 41 - opencv_test_highgui (Failed)
+	 54 - opencv_test_cudalegacy (Failed)
+	 55 - opencv_perf_cudalegacy (Failed)
+	 67 - opencv_perf_stitching (Failed)
+	 68 - opencv_sanity_stitching (Failed)
+
 # 5. ros-desktop source install, remove eigen & opencv3
 
 # ROSTX2
