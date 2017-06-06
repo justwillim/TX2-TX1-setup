@@ -22,18 +22,22 @@
 * http://eigen.tuxfamily.org/index.php?title=Main_Page
 
 * it will fail 6 ctest cases out of 798
-* or if you build BTL, fail  ctest cases out of 832
+* or if you build BTL, fail 13 ctest cases out of 832
 
 host:
 
 `scp ~/Downloads/eigen-eigen-67e894c6cd8f.tar.bz2 ubuntu@<YOUR_SSH PATH>:~/`
 
+TX1:
 `cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_PREFIX=/usr/local -DEIGEN_TEST_CXX11=ON -DEIGEN_CUDA_COMPUTE_ARCH=53 -DEIGEN_BUILD_BTL=ON`
+
+TX2:
+`cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_INSTALL_PREFIX=/usr/local -DEIGEN_TEST_CXX11=ON -DEIGEN_CUDA_COMPUTE_ARCH=62 -DEIGEN_BUILD_BTL=ON`
 
 `make check`
 
 TX1 result:
-
+`
 Label Time Summary:
 Official       = 618.29 sec (660 tests)
 Unsupported    = 294.54 sec (164 tests)
@@ -54,7 +58,7 @@ The following tests FAILED:
 	830 - btl_tensor_linear (Not Run)
 	831 - btl_tensor_vecmat (Not Run)
 	832 - btl_tensor_matmat (Not Run)
-
+`
 
 this step will take really a long time
 
