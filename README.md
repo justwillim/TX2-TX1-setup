@@ -168,6 +168,13 @@ you could install ROS through apt, but it might conflict with OPENCV3-CUDA
 
 `~$ sudo ./jecson_clock.sh`
 
+## SDL
+sudo apt-get install libsdl-image1.2-dev 
+
+and
+
+sudo apt-get install libsdl-dev
+
 # some useful scropts
 monitor the CPU temperture
 
