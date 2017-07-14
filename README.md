@@ -188,11 +188,12 @@ check CUDA version
 # Enable /dev/ttyTHS2 (UART1) for TX2
 
 ## install dtc 
-
+```
 sudo apt-get install device-tree-compiler
-
+```
 ## rewrite kernel
 
+```
 sudo -s
 cd /tmp
 dtc -I dtb -O dts -o extracted.dts /boot/tegra186-quill-p3310-1000-c03-00-base.dtb
@@ -203,3 +204,4 @@ dtc -I dts -O -o dtb /boot/modified_tegra186-quill-p3310-1000-c03-00-base.dtb ex
 cd /boot/extlinux
 # edit extlinux.conf...add this line between MENU LABEL line and LINUX line:
 FDT /boot/modified_tegra186-quill-p3310-1000-c03-00-base.dtb
+```
