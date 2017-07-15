@@ -200,7 +200,7 @@ dtc -I dtb -O dts -o extracted.dts /boot/tegra186-quill-p3310-1000-c03-00-base.d
 # Search for "serial@c280000" where it is a block of code and not just a single line...
 # Change status = "disabled" to status = "okay";
 # Build a modified version:
-dtc -I dts -O -o dtb /boot/modified_tegra186-quill-p3310-1000-c03-00-base.dtb extracted.dts
+dtc -I dts -O dtb -o /boot/modified_tegra186-quill-p3310-1000-c03-00-base.dtb extracted.dts
 cd /boot/extlinux
 # edit extlinux.conf...add this line between MENU LABEL line and LINUX line:
 FDT /boot/modified_tegra186-quill-p3310-1000-c03-00-base.dtb
