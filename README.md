@@ -104,6 +104,7 @@ in opencv V3.2.0
 opencv_test_cudev will fail, but acturally, it success, ctest made a wrong test compare between 2.0 and 2.
 
 TX1 result:
+```
 Label Time Summary:
 Accuracy                 = 2187.12 sec (27 tests)
 Main                     = 6063.93 sec (71 tests)
@@ -151,7 +152,7 @@ The following tests FAILED:
 	 55 - opencv_perf_cudalegacy (Failed)
 	 67 - opencv_perf_stitching (Failed)
 	 68 - opencv_sanity_stitching (Failed)
-
+```
 # 5. ros-desktop source install, remove eigen & opencv3
 
 # ROSTX2
@@ -204,4 +205,14 @@ dtc -I dts -O dtb -o /boot/modified_tegra186-quill-p3310-1000-c03-00-base.dtb ex
 cd /boot/extlinux
 # edit extlinux.conf...add this line between MENU LABEL line and LINUX line:
 FDT /boot/modified_tegra186-quill-p3310-1000-c03-00-base.dtb
+```
+
+# test Ethernet speeed
+
+```
+$ sudo apt-get install iperf
+#start server
+$ sudo iperf -s
+#start client
+$ sudo iperf -c 192.168.1.xxx -i 5
 ```
