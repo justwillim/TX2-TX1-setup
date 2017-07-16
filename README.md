@@ -216,3 +216,8 @@ $ sudo iperf -s
 #start client
 $ sudo iperf -c 192.168.1.xxx -i 5
 ```
+
+# install SSH keys
+```
+ssh-copy-id user@123.45.56.78
+```
