@@ -170,7 +170,7 @@ you could install ROS through apt, but it might conflict with OPENCV3-CUDA
 `~$ sudo ./jecson_clock.sh`
 
 ## SDL
-sudo apt-get install libsdl-image1.2-dev 
+`sudo apt-get install libsdl-image1.2-dev 
 
 and
 
@@ -194,6 +194,7 @@ sudo apt-get install device-tree-compiler
 ```
 ## rewrite kernel
 
+### enable tty THS2
 ```
 sudo -s
 cd /tmp
@@ -206,6 +207,18 @@ cd /boot/extlinux
 # edit extlinux.conf...add this line between MENU LABEL line and LINUX line:
 FDT /boot/modified_tegra186-quill-p3310-1000-c03-00-base.dtb
 ```
+### enable CAN buss
+
+ref: http://www.jetsonhacks.com/2017/03/25/build-kernel-and-modules-nvidia-jetson-tx2/
+
+```
+$ git clone https://github.com/jetsonhacks/buildJetsonTX2Kernel.git
+```
+
+### use Manifold2 board USBs
+
+todo write notes
+
 
 # test Ethernet speeed
 
