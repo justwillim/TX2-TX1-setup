@@ -221,3 +221,23 @@ $ sudo iperf -c 192.168.1.xxx -i 5
 ```
 ssh-copy-id user@123.45.56.78
 ```
+
+# bash tools
+
+## devlist
+devlist is 
+```
+aliased to `sudo arp-scan --interface=eth0 192.168.1.0/24 | grep NVIDIA'
+```
+
+## dev 
+devlist is aliased to `sudo arp-scan --interface=eth0 192.168.1.0/24 | grep NVIDIA'
+dev is a function
+```
+dev () 
+{ 
+    local ip="$(sudo arp-scan --interface=eth0 192.168.1.0/24 | grep NVIDIA | sed -n $1p | cut -d'	' -f 1)";
+    echo "ssh into $ip";
+    ssh nvidia@$ip
+}
+````
