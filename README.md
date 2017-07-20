@@ -253,4 +253,18 @@ dev ()
     echo "ssh into $ip";
     ssh nvidia@$ip
 }
-````
+```
+
+# max_performance.sh
+
+```
+nvidia@tegra-ubuntu:~$ cat max_performance.sh 
+echo "Enabling fan for safety..."
+if [ ! -w /sys/kernel/debug/tegra_fan/target_pwm ] ; then
+echo "Cannot set fan -- exiting..."
+fi
+echo 255 > /sys/kernel/debug/tegra_fan/target_pwm
+
+nvpmodel -m 0
+./jetson_clocks.sh
+```
