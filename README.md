@@ -38,7 +38,7 @@ TX2:
 
 TX1 result:
 
-
+```
 Label Time Summary:
 Official       = 618.29 sec (660 tests)
 Unsupported    = 294.54 sec (164 tests)
@@ -59,7 +59,7 @@ The following tests FAILED:
 	830 - btl_tensor_linear (Not Run)
 	831 - btl_tensor_vecmat (Not Run)
 	832 - btl_tensor_matmat (Not Run)
-
+```
 
 this step will take really a long time
 
