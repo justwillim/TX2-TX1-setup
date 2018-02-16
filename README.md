@@ -100,6 +100,13 @@ Total Test time (real) = 392.52 sec
 
 https://github.com/jetsonhacks/buildOpenCVTX2/blob/master/buildOpenCV.sh
 
+Enable opengl, add `-WITH_OPENGL=ON`
+`sudo apt-get install qtbase5-dev`
+https://devtalk.nvidia.com/default/topic/965134/jetson-tx1/opencv-3-1-compilation-on-tx1-lets-collect-the-/post/4983805/#4983805
+
+patch opengl headers:
+https://devtalk.nvidia.com/default/topic/1007290/jetson-tx2/building-opencv-with-opengl-support-/post/5141945/#5141945
+
 in opencv V3.2.0
 opencv_test_cudev will fail, but acturally, it success, ctest made a wrong test compare between 2.0 and 2.
 
