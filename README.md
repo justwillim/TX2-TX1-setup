@@ -16,7 +16,7 @@
 
 `sudo apt-get install htop`
 
-# 2. Eigen manuly
+# 2. Eigen manually
 ## install Eigen stable release V3.3.3
 
 * http://eigen.tuxfamily.org/index.php?title=Main_Page
@@ -183,8 +183,8 @@ and
 
 sudo apt-get install libsdl-dev
 
-# some useful scropts
-monitor the CPU temperture
+# some useful scripts
+monitor the CPU temperature
 
 `watch -n 1 cat /sys/devices/virtual/thermal/thermal_zone1/temp`
 
